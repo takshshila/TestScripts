@@ -9,7 +9,7 @@ the_control_flag = 0
 
 server_address = "127.0.0.1"
 mqtt_client = client.Client("ECG")
-data_directory = '/home/asim/ssriva59/setup-stuff/gateway_and_dataset'
+data_directory = '/home/asim/Desktop/Takshshila/IOT/TestScripts/Classification/29 datasets/SOM_datasets' #'/home/asim/ssriva59/setup-stuff/gateway_and_dataset'
 
 
 def prepare_data(data_dir, dataset, seed):

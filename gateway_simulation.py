@@ -46,6 +46,7 @@ def publish_data():
 
 # can create separate callbacks for each topic using client.message_callback_add("topicname", callback_function_name)
 def on_message(client, userdata, message):
+    print(message)
     global message_queue
     global latest_elements
 
@@ -79,8 +80,13 @@ print("Subscribing to all topics")
 mqtt_sub_pub.subscribe("from/sensor/#")
 mqtt_sub_pub.subscribe("from/zcu")
 
+
+mqtt_sub_pub.loop_forever()
+
+'''
 try:
     mqtt_sub_pub.loop_forever()
 except KeyboardInterrupt:
     mqtt_sub_pub.disconnect()
     sys.exit(0)
+'''
